@@ -192,4 +192,7 @@
   <data name="TicketStatus_Resolved" xml:space="preserve">
     <value>Resolvido</value>
   </data>
+  <data name="Department" xml:space="preserve">
+    <value>Departmento</value>
+  </data>
 </root>

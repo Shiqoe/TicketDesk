@@ -61,11 +61,47 @@ namespace TicketDesk.Localization.Identity {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirmation Do Not Match.
+        /// </summary>
+        public static string ConfirmationDoNotMatch {
+            get {
+                return ResourceManager.GetString("ConfirmationDoNotMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        public static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Staff Department.
+        /// </summary>
+        public static string Department {
+            get {
+                return ResourceManager.GetString("Department", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Display Name.
         /// </summary>
         public static string DisplayName {
             get {
                 return ResourceManager.GetString("DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
             }
         }
         
@@ -147,6 +183,15 @@ namespace TicketDesk.Localization.Identity {
         public static string RoleDescription {
             get {
                 return ResourceManager.GetString("RoleDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User or staff telephone number.
+        /// </summary>
+        public static string UserPhoneNumber {
+            get {
+                return ResourceManager.GetString("UserPhoneNumber", resourceCulture);
             }
         }
     }

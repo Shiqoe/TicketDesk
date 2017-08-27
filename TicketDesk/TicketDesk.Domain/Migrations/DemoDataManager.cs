@@ -47,8 +47,11 @@ namespace TicketDesk.Domain.Migrations
                    {
                        ProjectId = dProj.ProjectId,
                        Title = "Test Unassigned Ticket",
-                       AffectsCustomer = false,
-                       Category = "Hardware",
+                       Customer = new Customer { Name = "Faith Mwema", PhoneNumber = "0704057783", Location = "Stone Town", MeterNumber = "871327673824" },
+                       IfPower = false,
+                       IfFire = false,
+                       IfLossOfLife = false,
+                       Category = "Business",
                        CreatedBy = "17f78f38-fa68-445f-90de-38896140db28",
                        TicketStatus = TicketStatus.Active,
                        CurrentStatusDate = DateTimeOffset.Now,
@@ -64,7 +67,6 @@ namespace TicketDesk.Domain.Migrations
                        TicketTags = new List<TicketTag> { new TicketTag() { TagName = "test" }, { new TicketTag() { TagName = "moretest" } } },
                        TicketType = "Problem",
                        TicketEvents = new[] { TicketEvent.CreateActivityEvent("17f78f38-fa68-445f-90de-38896140db28", TicketActivity.Create, null, null, null) }
-
                    });
 
             var titles = new[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "A1", "B1", "C1", "D1", "E1", "F1", "G1", "H1", "I1", "J1", "K1", "L1", "M1", "N1", "O1", "P1", "Q1", "R1" };
@@ -95,7 +97,10 @@ namespace TicketDesk.Domain.Migrations
                     {
                         ProjectId = dProj.ProjectId,
                         Title = "Test Ticket " + p,
-                        AffectsCustomer = false,
+                        Customer = new Customer { Name = "Faith Mwema", PhoneNumber = "0704057783", Location = "Stone Town", MeterNumber = "871327673824" },
+                        IfPower = false,
+                        IfFire = false,
+                        IfLossOfLife = false,
                         AssignedTo = "64165817-9cb5-472f-8bfb-6a35ca54be6a",
                         Category = cc,
                         CreatedBy = oo,

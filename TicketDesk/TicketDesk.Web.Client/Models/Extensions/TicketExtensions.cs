@@ -92,6 +92,12 @@ namespace TicketDesk.Domain.Model
             return context.TicketDeskSettings.GetPriorityList(true, ticket.Priority);
         }
 
+        public static SelectList GetLocationList(this Ticket ticket)
+        {
+            var context = DependencyResolver.Current.GetService<TdDomainContext>();
+            return context.TicketDeskSettings.GetLocationsList(true, ticket.Priority);
+        }
+
         public static SelectList GetCategoryList(this Ticket ticket)
         {
             var context = DependencyResolver.Current.GetService<TdDomainContext>();

@@ -47,6 +47,8 @@ namespace TicketDesk.Web.Client.Controllers
             [ModelBinder(typeof(CommaSeparatedModelBinder))] string[] categories,
             [ModelBinder(typeof(CommaSeparatedModelBinder))] string[] tickettypes,
             [ModelBinder(typeof(CommaSeparatedModelBinder))] string[] priorities,
+            [ModelBinder(typeof(CommaSeparatedModelBinder))] string[] departments,
+            [ModelBinder(typeof(CommaSeparatedModelBinder))] string[] locations,
             List<string> defaultroles,
             string defaultTextEditorType
             )
@@ -57,6 +59,8 @@ namespace TicketDesk.Web.Client.Controllers
                 dbSetting.SelectLists.CategoryList = categories.ToList();
                 dbSetting.SelectLists.PriorityList = priorities.ToList();
                 dbSetting.SelectLists.TicketTypesList = tickettypes.ToList();
+                dbSetting.SelectLists.DepartmentList = departments.ToList();
+                dbSetting.SelectLists.LocationList = locations.ToList();
                 dbSetting.SecuritySettings.DefaultNewUserRoles = defaultroles;
                 dbSetting.ClientSettings.Settings["DefaultTextEditorType"] = defaultTextEditorType;
                 Context.SaveChanges();

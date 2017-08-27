@@ -137,8 +137,14 @@ namespace TicketDesk.Domain.Model
         [Display(ResourceType = typeof(Strings), Name = "TicketPriority", ShortName = "TicketPriorityShort")]
         public string Priority { get; set; }
 
-        [Display(ResourceType = typeof(Strings), Name = "TicketAffectsCustomer", ShortName = "TicketAffectsCustomerShort")]
-        public bool AffectsCustomer { get; set; }
+        [Display(ResourceType = typeof(Strings), Name = "TicketIfPower", ShortName = "TicketIfPowerShort")]
+        public bool IfPower { get; set; }
+
+        [Display(ResourceType = typeof(Strings), Name = "TicketIfFire", ShortName = "TicketIfFireShort")]
+        public bool IfFire { get; set; }
+
+        [Display(ResourceType = typeof(Strings), Name = "TicketIfLossOfLife", ShortName = "TicketIfLossOfLifeShort")]
+        public bool IfLossOfLife { get; set; }
 
         [Column(TypeName = "timestamp")]
         [MaxLength(8)]
@@ -146,6 +152,8 @@ namespace TicketDesk.Domain.Model
         public byte[] Version { get; set; }
 
         public virtual Project Project { get; set; }
+
+        public virtual Customer Customer { get; set; }
 
         public virtual ICollection<TicketEvent> TicketEvents { get; set; }
 

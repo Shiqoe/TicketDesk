@@ -39,6 +39,7 @@ namespace TicketDesk.Web.Client.Controllers
 
         [Route("")]
         [Route("index")]
+        [TdAuthorize]
         public ActionResult Index()
         {
             return View();

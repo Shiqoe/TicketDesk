@@ -124,6 +124,42 @@ namespace TicketDesk.Localization.Domain {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Location.
+        /// </summary>
+        public static string Customer_Location {
+            get {
+                return ResourceManager.GetString("Customer_Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Meter Number.
+        /// </summary>
+        public static string Customer_Meter_Number {
+            get {
+                return ResourceManager.GetString("Customer_Meter_Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Customer_Name {
+            get {
+                return ResourceManager.GetString("Customer_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone Number.
+        /// </summary>
+        public static string Customer_Phone_Number {
+            get {
+                return ResourceManager.GetString("Customer_Phone_Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to My Assigned.
         /// </summary>
         public static string DefaultListNameAssignedToMe {
@@ -219,6 +255,24 @@ namespace TicketDesk.Localization.Domain {
         public static string SelectList_Categories {
             get {
                 return ResourceManager.GetString("SelectList_Categories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Departments.
+        /// </summary>
+        public static string SelectList_Departments {
+            get {
+                return ResourceManager.GetString("SelectList_Departments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Locations.
+        /// </summary>
+        public static string SelectList_Locations {
+            get {
+                return ResourceManager.GetString("SelectList_Locations", resourceCulture);
             }
         }
         
@@ -565,24 +619,6 @@ namespace TicketDesk.Localization.Domain {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Affects Customer.
-        /// </summary>
-        public static string TicketAffectsCustomer {
-            get {
-                return ResourceManager.GetString("TicketAffectsCustomer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Customer.
-        /// </summary>
-        public static string TicketAffectsCustomerShort {
-            get {
-                return ResourceManager.GetString("TicketAffectsCustomerShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Assigned To.
         /// </summary>
         public static string TicketAssignedTo {
@@ -705,6 +741,60 @@ namespace TicketDesk.Localization.Domain {
         public static string TicketDetailsShort {
             get {
                 return ResourceManager.GetString("TicketDetailsShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fire.
+        /// </summary>
+        public static string TicketIfFire {
+            get {
+                return ResourceManager.GetString("TicketIfFire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fire.
+        /// </summary>
+        public static string TicketIfFireShort {
+            get {
+                return ResourceManager.GetString("TicketIfFireShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loss of life.
+        /// </summary>
+        public static string TicketIfLossOfLife {
+            get {
+                return ResourceManager.GetString("TicketIfLossOfLife", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loss of life.
+        /// </summary>
+        public static string TicketIfLossOfLifeShortTicketIfLossOfLifeShort {
+            get {
+                return ResourceManager.GetString("TicketIfLossOfLifeShortTicketIfLossOfLifeShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Power.
+        /// </summary>
+        public static string TicketIfPower {
+            get {
+                return ResourceManager.GetString("TicketIfPower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No power.
+        /// </summary>
+        public static string TicketIfPowerShort {
+            get {
+                return ResourceManager.GetString("TicketIfPowerShort", resourceCulture);
             }
         }
         

@@ -11,6 +11,7 @@
 // attribution must remain intact, and a copy of the license must be 
 // provided to the recipient.
 
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using TicketDesk.Web.Client;
@@ -33,6 +34,21 @@ namespace TicketDesk.Domain.Model
         public static SelectList GetTicketTypeList(this ApplicationSetting settings, bool includeEmpty, string selectedType)
         {
             return settings.SelectLists.TicketTypesList.ToSelectList(p => p, p => p, selectedType, includeEmpty);
+        }
+  
+        public static SelectList GetDepartmentList(this ApplicationSetting settings, bool includeEmpty, string selectedDepartment)
+        {
+            return settings.SelectLists.DepartmentList.ToSelectList(p => p, p => p, selectedDepartment, includeEmpty);
+        }
+
+        public static SelectList GetLocationsList(this ApplicationSetting settings, bool includeEmpty, string selectedDepartment)
+        {
+            return settings.SelectLists.LocationList.ToSelectList(p => p, p => p, selectedDepartment, includeEmpty);
+        }
+
+        public static ICollection<string> GetDepartmentList(this ApplicationSetting settings)
+        {
+            return settings.SelectLists.DepartmentList.ToList();
         }
 
         public static MultiSelectList GetDefaultNewUserRolesList(this ApplicationSetting settings)
@@ -57,7 +73,14 @@ namespace TicketDesk.Domain.Model
         {
             return string.Join(",", settings.SelectLists.CategoryList);
         }
-
+        public static string GetDepartments(this ApplicationSetting settings)
+        {
+            return string.Join(",", settings.SelectLists.DepartmentList);
+        }
+        public static string GetLocations(this ApplicationSetting settings)
+        {
+            return string.Join(",", settings.SelectLists.LocationList);
+        }
 
     }
 }

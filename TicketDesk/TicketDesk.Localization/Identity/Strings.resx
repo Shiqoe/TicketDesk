@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ConfirmationDoNotMatch" xml:space="preserve">
+    <value>Confirmation Do Not Match</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Staff Department</value>
+  </data>
   <data name="DisplayName" xml:space="preserve">
     <value>Display Name</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
   </data>
   <data name="RoleDescription" xml:space="preserve">
     <value>Role Description</value>
@@ -146,5 +158,8 @@
   </data>
   <data name="Role_PendingApproval_Description" xml:space="preserve">
     <value>Users that have registered, but who's accounts have not been approved by an Administrator.</value>
+  </data>
+  <data name="UserPhoneNumber" xml:space="preserve">
+    <value>User or staff telephone number</value>
   </data>
 </root>

@@ -54,19 +54,21 @@ namespace TicketDesk.Web.Client.Controllers
         [Route("register")]
         public ActionResult Register()
         {
-            return View();
+            var model = new TicketDeskUser();
+            return View(model);
         }
 
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         [Route("register")]
-        public async Task<ActionResult> Register(UserRegisterViewModel model)
+        public async Task<ActionResult> Register(TicketDeskUser user)
         {
             if (ModelState.IsValid)
             {
-                var user = new TicketDeskUser { UserName = model.Email, Email = model.Email, DisplayName = model.DisplayName };
-                var result = await UserManager.CreateAsync(user, model.Password);
+                //var user = new TicketDeskUser { UserName = model.Email, Email = model.Email, DisplayName = model.DisplayName, PhoneNumber = model.PhoneNumber, Department = model.Department };
+                user.UserName = user.Email;
+                var result = await UserManager.CreateAsync(user, user.Password);
                 if (result.Succeeded)
                 {
                     await UserManager.AddToRolesAsync(user.Id, DomainContext.TicketDeskSettings.SecuritySettings.DefaultNewUserRoles.ToArray());
@@ -100,7 +102,7 @@ namespace TicketDesk.Web.Client.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return View(user);
         }
 
         [AllowAnonymous]

@@ -28,6 +28,8 @@ namespace TicketDesk.Domain.Model
             CategoryList = new List<string>(new[] { "Software", "Hardware", "Network" });
             PriorityList = new List<string>(new[] { "High", "Medium", "Low" });
             TicketTypesList = new List<string>(new[] { "Problem", "Question", "Request" });
+            DepartmentList = new List<string>(new[] { "Operations", "Commercial" });
+            LocationList = new List<string>(new[] { "Stone Town", "Mwembe Makumi", "Vuga" });
         }
 
         [JsonIgnore]
@@ -47,6 +49,8 @@ namespace TicketDesk.Domain.Model
                 CategoryList = jData.CategoryList;
                 PriorityList = jData.PriorityList;
                 TicketTypesList = jData.TicketTypesList;
+                DepartmentList = jData.DepartmentList;
+                LocationList = jData.LocationList;
             }
         }
 
@@ -61,6 +65,14 @@ namespace TicketDesk.Domain.Model
         [NotMapped]
         [Display(Name = "SelectList_TicketTypes", ResourceType = typeof(Strings))]
         public ICollection<string> TicketTypesList { get; set; }
+
+        [NotMapped]
+        [Display(Name = "SelectList_Departments", ResourceType = typeof(Strings))]
+        public ICollection<string> DepartmentList { get; set; }
+
+        [NotMapped]
+        [Display(Name = "SelectList_Locations", ResourceType = typeof(Strings))]
+        public ICollection<string> LocationList { get; set; }
     }
 
 }

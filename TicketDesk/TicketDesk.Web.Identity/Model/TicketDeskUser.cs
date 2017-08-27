@@ -28,6 +28,22 @@ namespace TicketDesk.Web.Identity.Model
         [Display(Name = "DisplayName", ResourceType = typeof(Strings))]
         public string DisplayName { get; set; }
 
+        [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Validation))]
+        [StringLength(100, ErrorMessageResourceName = "FieldMaximumLength", ErrorMessageResourceType = typeof(Validation))]
+        [Display(Name = "Department", ResourceType = typeof(Strings))]
+        public string Department { get; set; }
+
+        [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Validation))]
+        [StringLength(100, ErrorMessageResourceName = "FieldMinimumLength", ErrorMessageResourceType = typeof(Validation), MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password", ResourceType = typeof(Strings))]
+        public string Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "ConfirmPassword", ResourceType = typeof(Strings))]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessageResourceName = "ConfirmationDoNotMatch", ErrorMessageResourceType = typeof(Strings))]
+        public string ConfirmPassword { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<TicketDeskUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

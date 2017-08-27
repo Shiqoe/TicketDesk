@@ -274,11 +274,11 @@
   <data name="ExceptionSettingsTypeConversionError" xml:space="preserve">
     <value>Setting type conversion error: unable to convert SettingName [{0}] to specified SettingType [{1}]</value>
   </data>
-  <data name="TicketAffectsCustomer" xml:space="preserve">
-    <value>Affects Customer</value>
+  <data name="TicketIfPower" xml:space="preserve">
+    <value>No Power</value>
   </data>
-  <data name="TicketAffectsCustomerShort" xml:space="preserve">
-    <value>Customer</value>
+  <data name="TicketIfPowerShort" xml:space="preserve">
+    <value>No power</value>
   </data>
   <data name="TicketAssignedTo" xml:space="preserve">
     <value>Assigned To</value>
@@ -415,5 +415,35 @@
   </data>
   <data name="AllowInternalUsersToSetOwner" xml:space="preserve">
     <value>Allow internal users to set or change the ticket owner?</value>
+  </data>
+  <data name="SelectList_Departments" xml:space="preserve">
+    <value>Departments</value>
+  </data>
+  <data name="SelectList_Locations" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="Customer_Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Customer_Meter_Number" xml:space="preserve">
+    <value>Meter Number</value>
+  </data>
+  <data name="Customer_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Customer_Phone_Number" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="TicketIfFire" xml:space="preserve">
+    <value>Fire</value>
+  </data>
+  <data name="TicketIfFireShort" xml:space="preserve">
+    <value>Fire</value>
+  </data>
+  <data name="TicketIfLossOfLife" xml:space="preserve">
+    <value>Loss of life</value>
+  </data>
+  <data name="TicketIfLossOfLifeShortTicketIfLossOfLifeShort" xml:space="preserve">
+    <value>Loss of life</value>
   </data>
 </root>

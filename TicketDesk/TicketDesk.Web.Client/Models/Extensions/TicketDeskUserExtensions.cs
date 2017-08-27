@@ -13,6 +13,8 @@
 
 using System.Collections.Generic;
 using System.Web.Mvc;
+using TicketDesk.Domain;
+using TicketDesk.Domain.Model;
 using TicketDesk.Web.Identity.Model;
 
 namespace TicketDesk.Web.Client.Models
@@ -28,6 +30,12 @@ namespace TicketDesk.Web.Client.Models
         public static SelectList ToUserSelectList(this IEnumerable<TicketDeskUser> users, string selectedUserId, string emptyText)
         {
             return users.ToSelectList(u => u.Id, u => u.DisplayName, emptyText, null, selectedUserId);
+        }
+
+        public static SelectList GetDepartment(this TicketDeskUser ticketDeskUser)
+        {
+            var context = DependencyResolver.Current.GetService<TdDomainContext>();
+            return context.TicketDeskSettings.GetDepartmentList(true, ticketDeskUser.Department);
         }
     }
 }

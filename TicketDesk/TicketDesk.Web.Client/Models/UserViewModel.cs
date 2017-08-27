@@ -12,8 +12,12 @@
 // provided to the recipient.
 
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
+using TicketDesk.Domain;
+using TicketDesk.Domain.Model;
 using TicketDesk.Localization;
 using TicketDesk.Localization.Models;
+using TicketDesk.Web.Identity.Model;
 
 namespace TicketDesk.Web.Client.Models
 {
@@ -30,6 +34,16 @@ namespace TicketDesk.Web.Client.Models
         public string DisplayName { get; set; }
 
         [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Validation))]
+        [StringLength(100, ErrorMessageResourceName = "FieldMaximumLength", ErrorMessageResourceType = typeof(Validation))]
+        [Display(Name = "Department", ResourceType = typeof(Strings))]
+        public string Department { get; set; }
+
+        [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Validation))]
+        [StringLength(100, ErrorMessageResourceName = "FieldMaximumLength", ErrorMessageResourceType = typeof(Validation))]
+        [Display(Name = "UserPhoneNumber", ResourceType = typeof(Strings))]
+        public string PhoneNumber { get; set; }
+
+        [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Validation))]
         [StringLength(100, ErrorMessageResourceName = "FieldMinimumLength", ErrorMessageResourceType = typeof(Validation), MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password", ResourceType = typeof(Strings))]
@@ -37,7 +51,7 @@ namespace TicketDesk.Web.Client.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "ConfirmPassword", ResourceType = typeof(Strings))]
-        [Compare("Password", ErrorMessageResourceName = "ConfirmationDoNotMatch", ErrorMessageResourceType = typeof(Strings))]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessageResourceName = "ConfirmationDoNotMatch", ErrorMessageResourceType = typeof(Strings))]
         public string ConfirmPassword { get; set; }
     }
 
